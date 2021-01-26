@@ -1,361 +1,336 @@
 @font-face {
-    font-family: Raleway;
-    src: url(/assets/fonts/Raleway/static/Raleway-Light.ttf);
-} 
+  font-family: Raleway;
+  src: url(/assets/fonts/Raleway/static/Raleway-Light.ttf);
+}
 @font-face {
-    font-family: Raleway;
-    src: url(/assets/fonts/Raleway/static/Raleway-Bold.ttf);
-    font-weight: bold;
-} 
-
-
-
+  font-family: Raleway;
+  src: url(/assets/fonts/Raleway/static/Raleway-Bold.ttf);
+  font-weight: bold;
+}
 
 /* * {
     outline: red 1px solid;
 } */
 
 :root {
-    font-size: 16px;
-    font-family: Raleway;
-    /* Variables */
-    --backdrop-blur: 3px;
-    --post-background-color: rgba(255, 255, 255, 0.747);
-    --box-shadow: 0px 0px 43px -12px rgba(184, 184, 184, 0.75);
+  font-size: 16px;
+  font-family: Raleway;
+  /* Variables */
+  --backdrop-blur: 3px;
+  --post-background-color: rgba(255, 255, 255, 0.747);
+  --box-shadow: 0px 0px 43px -12px rgba(184, 184, 184, 0.75);
 }
 
 .post {
-    background: var(--post-background-color);
-    backdrop-filter: blur(var(--backdrop-blur));
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    margin: 0rem 1rem 0rem 1rem;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    box-shadow: var(--box-shadow);
-    
+  background: var(--post-background-color);
+  backdrop-filter: blur(var(--backdrop-blur));
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  margin: 0rem 1rem 0rem 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
 }
 
 .post:not(:first-of-type) {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
-
-
-
-
-
-
 
 /* Date section */
 .date-section {
-    height: 2rem;
-    display: flex;
-    justify-content: space-between;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .date-section .left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1rem;
-    height: 2rem;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  height: 2rem;
+  position: relative;
 }
 .date-section .right {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    margin-right: 1rem;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-right: 1rem;
+  position: relative;
 }
 
 .date-section .left img {
-    background: mediumaquamarine;
-    height: 1.2rem;
-    width: 1.2rem;
-    border-radius: 50%;
-    margin-right: 1rem;
-    /* width: ; */
+  background: mediumaquamarine;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  /* width: ; */
 }
 
 .date-section .right * {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .date-section .left .name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .date-section .left .name {
-    height: 100%;
-    margin: 0;
-    margin-right: 1rem;
-    /* width: ; */
+  height: 100%;
+  margin: 0;
+  margin-right: 1rem;
+  /* width: ; */
 }
 .date-section .right .date {
-    height: 100%;
-    margin: 0;
-    /* width: ; */
+  height: 100%;
+  margin: 0;
+  /* width: ; */
 }
-
 
 /* image section */
 .image-section {
-    height: 16rem;
-    width: 100%;
-    overflow: hidden;
+  height: 16rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 .image-section img {
-    position: relative;
-    border-radius: 20px;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  position: relative;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
-
-
-
-
-
-
 
 /* text section */
 .text-section {
-    height: 10rem;
-    display: flex;
-    padding: 1rem;
+  height: 10rem;
+  display: flex;
+  padding: 1rem;
 }
 
 .text-section .text-section-text {
-width: 70%;
+  width: 70%;
 }
 
 .text-section .text-section-text h2 {
-    margin: .5rem 0rem;
+  margin: 0.5rem 0rem;
 }
 
 .text-section .text-section-text p {
-    margin: .5rem 0rem;
+  margin: 0.5rem 0rem;
 }
 
-
 .text-section .text-section-vote {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .img-container {
-    position: relative;;
-    width: 100%;
-    margin: 0;
-    flex-grow: 1;
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  flex-grow: 1;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.text-section .text-section-vote img.upvote  {
-    height: 60%;
-    width: auto;
+.text-section .text-section-vote img.upvote {
+  height: 60%;
+  width: auto;
 }
 .text-section .text-section-vote p {
-    position: relative;;
-    width: 100%;
-    margin: 0;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .text-section .text-section-vote img.downvote {
-    height: 60%;
-    width: auto;
+  height: 60%;
+  width: auto;
 }
 
 .upvoteInactive {
-    height: 60%;
-    width: auto;
+  height: 60%;
+  width: auto;
 }
 
 .downvoteInactive {
-    height: 60%;
-    width: auto;
+  height: 60%;
+  width: auto;
 }
 
 .upvote-active {
-    height: 60%;
-    width: auto;
+  height: 60%;
+  width: auto;
 }
 
 .downvote-active {
-    height: 60%;
-    width: auto;
+  height: 60%;
+  width: auto;
 }
-
-
-
-
-
-
 
 /* bottom section */
 .bottom-section {
-    height: 2rem;
-    display: flex;
-    justify-content: space-between;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .bottom-section .left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
 }
 
 .bottom-section .right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
 }
 
 .bottom-section .left button {
-    border: none;
-    background: none;
-    font-weight: bold;
-    outline: none;
+  border: none;
+  background: none;
+  font-weight: bold;
+  outline: none;
 }
 
-.bottom-section .right .edit-button, .post-edit-button {
-    border-radius: 5rem;
-    background-color: rgb(0, 132, 255);
-    appearance: none;
-    border: none;
-    margin-right: 1rem;
-    padding: .3rem .6rem;
+.bottom-section .right .edit-button,
+.post-edit-button {
+  border-radius: 5rem;
+  background-color: rgb(0, 132, 255);
+  appearance: none;
+  border: none;
+  margin-right: 1rem;
+  padding: 0.3rem 0.6rem;
 }
 
-.bottom-section .right .delete-button, .post-delete-button {
-    border-radius: 5rem;
-    background-color: rgb(255, 0, 0);
-    appearance: none;
-    padding: .3rem .6rem;
-    border: none;
+.bottom-section .right .delete-button,
+.post-delete-button {
+  border-radius: 5rem;
+  background-color: rgb(255, 0, 0);
+  appearance: none;
+  padding: 0.3rem 0.6rem;
+  border: none;
 }
-
-
-
-
-
-
-
 
 /* Comment */
 .comment {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    margin: 0rem 2rem 1rem 2rem;
-    flex-grow: 1;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    background: var(--post-background-color);
-    backdrop-filter: blur(var(--backdrop-blur));
-    box-shadow: var(--box-shadow);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  margin: 0rem 2rem 1rem 2rem;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: var(--post-background-color);
+  backdrop-filter: blur(var(--backdrop-blur));
+  box-shadow: var(--box-shadow);
 }
 
 .comment .upper {
-    height: 2rem;
-    display: flex;
-    justify-content: space-between;
-
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .comment .upper .right {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .comment .upper .left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1rem;
 }
 .comment .upper .left img {
-    height: 1.2rem;
-    width: 1.2rem;
-    border-radius: 50%;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
 }
 .comment .upper .left .name {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 .comment .lower {
-    display: flex;
-    justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
 }
 
-.comment .lower .right  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1rem;
+.comment .lower .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
 }
 
 .comment .lower .right .edit-button {
-    margin-right: 1rem;
-    background: rgb(0, 132, 255);
-   
+  margin-right: 1rem;
+  background: rgb(0, 132, 255);
 }
 .comment .lower .right .delete-button {
-    background: #F00;
-   
+  background: #f00;
 }
 
 .comment .lower .left {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .button {
-    border-radius: 5rem;
-    appearance: none;
-    border: none;
-    padding: .3rem .6rem;
+  border-radius: 5rem;
+  appearance: none;
+  border: none;
+  padding: 0.3rem 0.6rem;
 }
-
-
-
-
-
-
 
 /* Create post  */
 .text-section .text-section-text .headline {
-    margin-top: 1rem;
-    font-size: 1.5rem;  
-    background: none;  
-    border: none;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
 }
 
 .text-section .text-section-text .body {
-    width: 100%;
-    height: 6rem;
-    margin-top: 1rem;
-    font-size: 1rem;
-    background: none;
-    border: none;
+  width: 100%;
+  height: 6rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  background: none;
+  border: none;
 }
 
+.like-comment-button {
+  height: 15px;
+  width: 15px;
+  border: none;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 0.2rem;
+}
 
+.like-comment-button:focus {
+  outline: none;
+}
+
+.vote-number {
+  padding: 5px;
+}

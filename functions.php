@@ -55,3 +55,57 @@ function redirect(string $path)
 //         echo $error->error;
 //     }
 // }
+
+function existUpvote($db, $commentid, $userid)
+{
+    $query = 'SELECT * FROM comment_likes WHERE comment_id = :comment_id AND user_id = :user_id';
+    $statement = $db->prepare($query);
+
+    if (!$statement) {
+        die(var_dump($db->errorinfo()));
+    }
+
+    $statement->bindParam(':comment_id', $commentid, PDO::PARAM_INT);
+    $statement->bindParam(':user_id', $userid, PDO::PARAM_INT);
+    $statement->execute();
+
+    $upvote = $statement->fetch(PDO::FETCH_ASSOC);
+
+    if ($upvote) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function getUpvotes($db, $id): int
+{
+    $query = 'SELECT COUNT(*) FROM comment_likes WHERE comment_id = :comment_id';
+    $statement = $db->prepare($query);
+
+    $statement->bindParam(':comment_id', $id, PDO::PARAM_INT);
+    $statement->execute();
+
+    $upvotes = $statement->fetch(PDO::FETCH_ASSOC);
+    return (int) $upvotes["COUNT(*)"];
+}
+
+function likeComment($db, $commentid, $userid)
+{
+    $query = 'INSERT INTO comment_likes (comment_id, user_id) VALUES (:comment_id, :user_id)';
+    $statement = $db->prepare($query);
+
+    $statement->bindParam(':comment_id', $commentid, PDO::PARAM_INT);
+    $statement->bindParam(':user_id', $userid, PDO::PARAM_INT);
+    $statement->execute();
+}
+
+function unlikeComment($db, $commentid, $userid)
+{
+    $query = 'DELETE FROM comment_likes WHERE user_id = :user_id AND comment_id = :comment_id';
+    $statement = $db->prepare($query);
+
+    $statement->bindParam(':comment_id', $commentid, PDO::PARAM_INT);
+    $statement->bindParam(':user_id', $userid, PDO::PARAM_INT);
+    $statement->execute();
+}

@@ -41,6 +41,10 @@ if (!$_SESSION['user']) {
             <input class="input-field" value="<?php echo $_SESSION['user']['bio'] ?>" type="text" name="bio" id="bio">
             <input class="save" type="submit" value="Save">
         </form>
+
+        <form action="/Account/delete_account.php" method="post">
+            <input class="delete-account" type="submit" value="Delete account" onclick="if (!confirm('Are you sure you want to delete your account? There\'s no going back from this.')) { return false }">
+        </form>
     </section>
     <script src="../script/hamburger.js"></script>
 </body>

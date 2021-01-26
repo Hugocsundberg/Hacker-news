@@ -1,44 +1,54 @@
-section.form form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+section.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section.top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
-    flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  flex-grow: 0;
 }
 
-section.top h1{
-    margin-top: 0;
+section.top h1 {
+  margin-top: 0;
 }
 
 section.top img {
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
 }
 
 section.form label {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    width: 16rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  width: 16rem;
 }
 
 section.form .save {
-    margin-top: 1rem;
-    height: 3rem;
-    width: 9rem;
-    background: lime;
-    color: white;
-    border: none;
-    border-radius: 50rem;
-    font-size: 1rem;
+  margin-top: 1rem;
+  height: 3rem;
+  width: 9rem;
+  background: lime;
+  color: white;
+  border: none;
+  border-radius: 50rem;
+  font-size: 1rem;
 }
 
-
+section.form .delete-account {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 3rem;
+  width: 9rem;
+  background: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 50rem;
+  font-size: 1rem;
+}

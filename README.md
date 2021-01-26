@@ -12,3 +12,8 @@
 - Use the button tag instead of input in your forms when you submit to be more semantic.
 - You have a lot of empty space in your files, mainly in index.php. Consider removing that for more compact code.
 - Overall a great job!
+
+## Added features by Gilda Eklöf
+
+- As a user I'm able to delete my account along with all posts, upvotes and comments.
+- As a user I'm able to upvote and remove upvote on comments.

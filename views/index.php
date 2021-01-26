@@ -209,12 +209,25 @@ $posts = $result->fetchAll(PDO::FETCH_ASSOC);
                     <div class="left">
                         <p class="comment-paragraph"><?= $comment['body'] ?></p>
                     </div>
-                    <?php if (isset($_SESSION['user']) && $comment['user_id'] === $_SESSION['user']['id']) : ?>
-                        <div class="right">
+                    <div class="right">
+                        <?php if (isset($_SESSION['user']) && $comment['user_id'] === $_SESSION['user']['id']) : ?>
                             <button class="edit-button button">Edit</button>
                             <button class="delete-button button">Delete</button>
-                        </div>
-                    <?php endif ?>
+                        <?php endif; ?>
+                        <span class="vote-number" data-id="<?= $commentId; ?>"><?= getUpvotes($db, $commentId) ?></span>
+                        <?php if (isset($_SESSION['user'])) : ?>
+                            <form class="like-comment-form" action="/Account/like-comment.php" method="post">
+                                <input type="hidden" name="like-comment" id="comment-id" value="<?= $commentId; ?>"></input>
+                                <?php if (!existUpvote($db, $commentId, $_SESSION['user']['id'])) : ?>
+                                    <button style="background-color: black;" value="submit" type="submit" class="like-comment-button" data-id="<?= $commentId; ?>"></button>
+                                <?php else : ?>
+                                    <button style="background-color: rgb(37, 104, 246);" value="submit" type="submit" class="like-comment-button" data-id="<?= $commentId; ?>"></button>
+                                <?php endif; ?>
+                            </form>
+                        <?php else : ?>
+                            <button style="background-color: black;" value="submit" type="submit" class="like-comment-button" data-id="<?= $commentId; ?>"></button>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         <?php endforeach ?>
@@ -227,6 +240,7 @@ $posts = $result->fetchAll(PDO::FETCH_ASSOC);
     <script src="/script/comment.js"></script>
     <script src="/script/sort.js"></script>
     <script src="/script/hamburger.js"></script>
+    <script src="/script/like-comment.js"></script>
 </body>
 <?php createMessage(3) ?>
 
